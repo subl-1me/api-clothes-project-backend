@@ -6,9 +6,9 @@ const router = express.Router();
 import UserController from "../controllers/user";
 
 router.post("/", UserController.insert);
-router.post("/:id", UserController.update);
-router.patch("/", UserController.remove);
-router.get("/", UserController.getItemById);
-router.get("/", UserController.getItems);
+router.patch("/:id", UserController.update);
+router.delete("/:id", UserController.remove);
+router.get("/", UserController.getList);
+// router.get("/:id", UserController.getItemById);
 
 export default router;
